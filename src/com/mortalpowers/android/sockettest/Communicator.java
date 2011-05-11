@@ -72,6 +72,7 @@ public class Communicator extends
 	public void send(String s) {
 		try {
 			out.write(s);
+			out.flush();
 			parent.debugMsg("Sending " + s);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
